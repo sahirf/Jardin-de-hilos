@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jardin de Hilos</title>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Estilos CSS adicionales */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+    background-image: url("bote.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  /* Estilos para las secciones individuales */
+
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    nav {
+      margin-bottom: 30px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      border: 1px solid #0c0b0b;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 40px;
+    }
+
+    .slider {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .slider img {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .slider button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .slider button.prev {
+      left: 10px;
+    }
+
+    .slider button.next {
+      right: 10px;
+    }
+
+    .slider button:hover {
+      color: #ff0000;
+    }
+
+    /* Estilos para el modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 800px;
+      height: auto;
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: auto;
+    }
+
+    .close {
+      color: #fff;
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #ff0000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jardin de Hilos</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#articulos">Artículos</a></li>
+      <li><a href="#productos">Medios de Pago</a></li>
+      <li><a href="#medios">contactanos</a></li>
+    </ul>
+  </nav>
+
+  <section id="articulos">
+    <h2>Artículos</h2>
+    <div class="slider">
+      <div class="articulo">
+        <img src="flor.jpg" alt="Imagen 1" style="width: 75%; height: auto;" onclick="openModal(this.src)">
+      </div>
+      <div class="articulo">
+        <img src="flor amarilla.jpg" alt="Imagen 2" style="width: 70%; height: auto;" onclick="openModal(this.src)">
+      </div>
+      <div class="articulo">
+        <img src="floramarilla2.jpg" alt="Imagen 3" style="width: 51%; height: auto;" onclick="openModal(this.src)">
+      </div>
+    </div>
+    <!-- Contenido de la sección de artículos -->
+  </section>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        prevArrow: '<button class="prev" type="button">&#8249;</button>',
+        nextArrow: '<button class="next" type="button">&#8250;</button>',
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+      });
+    });
+
+    function openModal(src) {
+      var modal = document.getElementById("myModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>
+
+  
+    
+    <!-- Contenido de la sección de productos -->
+  </section>
+
+  <section id="productos">
+    <h2>Métodos de Pago</h2>
+    <div class="slider">
+      <div>
+        <img src="efectivologo.jpg" alt="Imagen 4" style="width: 80%; height: auto;" onclick="window.location.href='https:/wa.me/+573103855417'">
+      </div>
+      <div>
+        <img src="transferencia.jpg" alt="Imagen 5" style="width: 70%; height: auto;" onclick="window.location.href='https:/wa.me/+573103855417'">
+      </div>
+    </div>
+    <!-- Contenido de la sección de productos -->
+  </section>
+
+  <section id="medios">
+    <h2>Contáctenos</h2>
+    <div class="slider">
+      <div>
+        <img src="whatsicono.jpg" alt="Imagen 4" style="width: 40%; height: auto;" onclick="window.location.href='https:/wa.me/+573103855417'">
+      </div>
+        <img src="instalogo.jpg" alt="Imagen 5" style="width: 20%; height: auto;" onclick="window.location.href='https:/www.instagram.com/_jardin_de_hilos_/'">
+      </div>
+    </div>
+    <!-- Contenido de la sección de medios de pago -->
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        prevArrow: '<button class="prev" type="button">&#8249;</button>',
+        nextArrow: '<button class="next" type="button">&#8250;</button>',
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+      });
+    });
+  </script>
+  <footer>
+    <!-- Otros elementos del pie de página -->
+
+    <section id="resenas">
+      <h3>Reseñas de Clientes</h3>
+      <div class="resena">
+        <h4> Juan carlos ortis</h4>
+        <p>¡Excelente servicio y productos de alta calidad! Definitivamente recomendaría esta tienda a todos.</p>
+      </div>
+      <div class="resena">
+        <h4>María Suarez</h4>
+        <p>Me encanta comprar aquí. Siempre encuentro lo que necesito y el personal es muy amable y servicial.</p>
+      </div>
+      <div class="resena">
+        <h4>Pedro Sanches</h4>
+        <p>La experiencia de compra fue increíble. Los productos llegaron rápidamente y en perfectas condiciones.</p>
+        <div class="resena">
+          <h4>Usuario</h4>
+          <p>Deja tu comentario:</p>
+          <form id="commentForm">
+            <textarea name="comment" placeholder="Escribe tu comentario aquí" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        
+      </div>
+    </section>
+  </footer>
+  <section id="preguntas-frecuentes">
+    <div class="rectangulo">
+      <h3>Preguntas Frecuentes</h3>
+      <div class="pregunta">
+        <h4>¿Cuál es el tiempo de envío?</h4>
+        <p>El tiempo de envío varía dependiendo de tu ubicación. Normalmente, nuestros productos son entregados en un plazo de 3 a 5 días hábiles.</p>
+      </div>
+      <div class="pregunta">
+        <h4>¿Puedo devolver un producto?</h4>
+        <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra. Por favor, consulta nuestra política de devoluciones para más información.</p>
+      </div>
+      <div class="pregunta">
+        <h4>¿Ofrecen envío internacional?</h4>
+        <p>Sí, realizamos envíos internacionales a varios países. Para conocer los detalles y costos de envío, por favor, contáctanos.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

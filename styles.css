@@ -1,0 +1,91 @@
+/* styles.css */
+
+/* Estilos para la sección de preguntas frecuentes */
+
+#articulos .articulo {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#productos .slider {
+  display: flex;
+  justify-content: space-between;
+}
+#productos .slider img {
+  max-width: 70%;
+  height: auto;
+}
+
+#medios .slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+#medios .slider img {
+  max-width: 45%;
+  height: auto;
+}
+
+
+#resenas {
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .resena {
+    margin-bottom: 20px;
+  }
+  
+  .resena h4 {
+    font-weight: bold;
+  }
+  
+  .resena p {
+    margin-top: 5px;
+  }
+  
+#preguntas-frecuentes {
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .rectangulo {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+  .rectangulo h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .pregunta {
+    margin-bottom: 20px;
+  }
+  
+  .pregunta h4 {
+    font-weight: bold;
+  }
+  
+  .pregunta p {
+    margin-top: 5px;
+  }
+
+  .resena form {
+    margin-top: 10px;
+  }
+  
+  .resena textarea {
+    width: 100%;
+    height: 80px;
+    resize: vertical;
+    padding: 5px;
+  }
+  
+  .resena button {
+    margin-top: 10px;
+  }
+  
+  
