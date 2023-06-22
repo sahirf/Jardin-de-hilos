@@ -7,14 +7,54 @@
   margin-right: 10px;
 }
 
-#productos .slider {
-  display: flex;
-  justify-content: space-between;
-}
-#productos .slider img {
-  max-width: 70%;
+
+#articulos2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .articulo {
+    flex: 1;
+    margin: 10px;
+  }
+
+  .articulo img {
+    width: 100%;
+    height: auto;
+  }
+
+  #articulos3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .articulo {
+    flex: 1;
+    margin: 10px;
+  }
+
+  .articulo img {
+    width: 100%;
+    height: auto;
+  } 
+
+
+  #productos .slider {
+    display: flex;
+    justify-content: space-between;
+  }
+  #productos .slider img {
+    max-width: 70%;
+    height: auto;
+  }
+  
+
+.articulo img {
+  width: 100%;
   height: auto;
-}
+} 
 
 #medios .slider {
   display: flex;
@@ -88,4 +128,35 @@
     margin-top: 10px;
   }
   
-  
+  /* Estilos para los rectángulos */
+.rectangulo {
+  border: 1px solid #0c0b0b;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.pregunta {
+  margin-bottom: 20px;
+}
+
+
+.image-container {
+  display: inline-block;
+  width: 50%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.image-container:nth-child(1) {
+  float: left;
+}
+
+.image-container:nth-child(2) {
+  float: right;
+}

@@ -155,16 +155,67 @@
     <div class="slider">
       <div class="articulo">
         <img src="flor.jpg" alt="Imagen 1" style="width: 75%; height: auto;" onclick="openModal(this.src)">
+        <h1>Rosa</h1>
+      <p class="precio">$20.000</p>
       </div>
       <div class="articulo">
         <img src="flor amarilla.jpg" alt="Imagen 2" style="width: 70%; height: auto;" onclick="openModal(this.src)">
+        <h1>Llavero</h1>
+      <p class="precio">$10.000</p>
       </div>
       <div class="articulo">
         <img src="floramarilla2.jpg" alt="Imagen 3" style="width: 51%; height: auto;" onclick="openModal(this.src)">
+        <h1>Flor</h1>
+      <p class="precio">$20.000</p>
       </div>
-    </div>
+      </div>
     <!-- Contenido de la sección de artículos -->
   </section>
+
+
+  <section id="articulos2">
+    <div class="articulo">
+      <img src="spidermanwhat2.jpg" alt="Imagen 4" style="width: 30%; height: auto;" onclick="openModal(this.src)">
+      <h1>Spiderman</h1>
+      <p class="precio">$50.000</p>
+    </div>
+    <div class="articulo">
+      <img src="spidermanwhat3.jpg" alt="Imagen 5" style="width: 30%; height: auto;" onclick="openModal(this.src)">
+      <h1>Spiderman</h1>
+      <p class="precio">$50.000</p>
+    </div>
+    <div class="articulo">
+      <img src="spidermanwhat4.jpg" alt="Imagen 6" style="width: 30%; height: auto;" onclick="openModal(this.src)">
+      <h1>Spiderman</h1>
+      <p class="precio">$50.000</p>
+    </div>
+  </section>
+
+  <section id="articulos3">
+    <div class="articulo">
+      <img src="spidermanwhat4.jpg" alt="Imagen 4" style="width: 30%; height: auto;" onclick="openModal(this.src)">
+      <h1>Spiderman</h1>
+      <p class="precio">$50.000</p>
+    </div>
+    <div class="articulo">
+      <img src="spidermanwhat5.jpg" alt="Imagen 5" style="width: 30%; height: auto;" onclick="openModal(this.src)">
+      <h1>Spiderman</h1>
+      <p class="precio">$50.000</p>
+    </div>
+    <div class="articulo">
+      <img src="spidermanwhat6.jpg" alt="Imagen 6" style="width: 30%; height: auto;" onclick="openModal(this.src)">
+      <h1>Spiderman</h1>
+      <p class="precio">$50.000</p>
+    </div>
+  </section>
+  
+  <style>
+    .precio {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+  </style>
+  
 
   <!-- Modal -->
   <div id="myModal" class="modal">
@@ -199,45 +250,37 @@
       modal.style.display = "none";
     }
   </script>
-</body>
-</html>
 
-  
-    
-    <!-- Contenido de la sección de productos -->
-  </section>
-
-  <section id="productos">
-    <h2>Métodos de Pago</h2>
-    <div class="slider">
-      <div>
-        <img src="efectivologo.jpg" alt="Imagen 4" style="width: 80%; height: auto;" onclick="redirectToExternalLink()">
-        <script>
-          function redirectToExternalLink() {
-            window.location.href = "https://onx.la/23437"; // Reemplaza con tu enlace externo deseado
-          }
-        </script>
-      </div>
-      <div>
-        <img src="transferencia.jpg" alt="Imagen 5" style="width: 70%; height: auto;" onclick="redirectToExternalLink()">
-        <script>
-          function redirectToExternalLink() {
-            window.location.href = "https://onx.la/23437"; // Reemplaza con tu enlace externo deseado
-          }
-        </script>
-        
-      </div>
+<section id="productos">
+  <h2>Métodos de Pago</h2>
+  <div class="slider">
+    <div class="image-container">
+      <img src="efectivologo.jpg" alt="Imagen 1" onclick="redirectToExternalLink1()">
+      <script>
+        function redirectToExternalLink1() {
+          window.location.href = "https://onx.la/23437"; // Reemplaza con tu enlace externo deseado
+        }
+      </script>
     </div>
-    <!-- Contenido de la sección de productos -->
-  </section>
+    <div class="image-container">
+      <img src="transferencia.jpg" alt="Imagen 2" onclick="redirectToExternalLink2()">
+      <script>
+        function redirectToExternalLink2() {
+          window.location.href = "https://onx.la/23437"; // Reemplaza con tu enlace externo deseado
+        }
+      </script>
+    </div>
+  </div>
+</section>
+
 
   <section id="medios">
     <h2>Contáctenos</h2>
     <div class="slider">
       <div>
-        <img src="whatsicono.jpg" alt="Imagen 4" style="width: 40%; height: auto;" onclick="redirectToExternalLink()">
+        <img src="whatsicono.jpg" alt="Imagen 4" style="width: 40%; height: auto;" onclick="redirectToExternalLink1()">
         <script>
-          function redirectToExternalLink() {
+          function redirectToExternalLink1() {
             window.location.href = "https://onx.la/23437"; // Reemplaza con tu enlace externo deseado
           }
         </script>
@@ -252,29 +295,14 @@
     </div>
     <!-- Contenido de la sección de medios de pago -->
   </section>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.slider').slick({
-        prevArrow: '<button class="prev" type="button">&#8249;</button>',
-        nextArrow: '<button class="next" type="button">&#8250;</button>',
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true
-      });
-    });
-  </script>
-  <footer>
+  
+<footer>
     <!-- Otros elementos del pie de página -->
 
     <section id="resenas">
       <h3>Reseñas de Clientes</h3>
       <div class="resena">
-        <h4> Juan carlos ortis</h4>
+        <h4>Juan Carlos Ortis</h4>
         <p>¡Excelente servicio y productos de alta calidad! Definitivamente recomendaría esta tienda a todos.</p>
       </div>
       <div class="resena">
@@ -284,18 +312,18 @@
       <div class="resena">
         <h4>Pedro Sanches</h4>
         <p>La experiencia de compra fue increíble. Los productos llegaron rápidamente y en perfectas condiciones.</p>
-        <div class="resena">
-          <h4>Usuario</h4>
-          <p>Deja tu comentario:</p>
-          <form id="commentForm">
-            <textarea name="comment" placeholder="Escribe tu comentario aquí" required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-        
+      </div>
+      <div class="resena">
+        <h4>Usuario</h4>
+        <p>Deja tu comentario:</p>
+        <form id="commentForm">
+          <textarea name="comment" placeholder="Escribe tu comentario aquí" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
       </div>
     </section>
   </footer>
+
   <section id="preguntas-frecuentes">
     <div class="rectangulo">
       <h3>Preguntas Frecuentes</h3>
@@ -305,15 +333,17 @@
       </div>
       <div class="pregunta">
         <h4>¿Puedo devolver un producto?</h4>
-        <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra. Por favor, consulta nuestra política de devoluciones para más información.</p>
+        <p>Sí, aceptamos devoluciones. Por favor, contáctanos para obtener más información.</p>
+      </div>
+      <div class="pregunta">
+        <h4>¿Qué métodos de pago aceptan?</h4>
+        <p>Aceptamos transferencias bancarias y pagos en efectivo.</p>
       </div>
       <div class="pregunta">
         <h4>¿Ofrecen envío internacional?</h4>
-        <p>Sí, realizamos envíos internacionales a varios países. Para conocer los detalles y costos de envío, por favor, contáctanos.</p>
+        <p>No, No ofrecemos envío internacional . Por favor, contáctanos para obtener más información sobre los costos y tiempos de envío.</p>
       </div>
     </div>
   </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
